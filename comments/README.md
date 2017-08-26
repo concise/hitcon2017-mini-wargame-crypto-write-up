@@ -10,8 +10,10 @@
 
 (TODO)
 
-- 這道題目用到的密碼學，主要是 [block cipher][bc] 和 [block cipher mode of
-  operation][mo] 當中的 CBC mode。
+- 這道題目需要用到的密碼學知識：
+
+  1. [block cipher][bc]
+  2. [block cipher mode of operation][mo] 當中的 CBC mode
 
 - 觀察 prob.py 程式之特性與可被利用的弱點：
 
@@ -49,6 +51,10 @@
 - 這道題目的答案是 `hitcon{IV_15_ve3y_funny}`
 
 - 不太一樣但蠻相關的 [padding oracle attack][poa] 十分經典，這些看似很傻的弱點有不少實際案例
+
+
+---
+
 
 ### If you want to run your own problem server...
 
