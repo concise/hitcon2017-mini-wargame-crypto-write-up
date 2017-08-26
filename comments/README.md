@@ -5,7 +5,7 @@
 - 這道題目用到的密碼學，主要是 [block cipher][bc] 和 [block cipher mode of
   operation][mo] 當中的 CBC mode。
 
-- 觀察 prob.py 程式數個可被利用的弱點：
+- 觀察 prob.py 程式之特性與可被利用的弱點：
 
   1.  server 用 CBC 模式加密訊息時，使用的 IV 是固定的
   2.  server 解密訊息後要做的 unpad() 並不會 reject 那些 padding 格式錯誤的訊息
