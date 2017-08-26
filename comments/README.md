@@ -1,4 +1,12 @@
-### Comments
+以下劇透本題解答。
+
+如果您還沒解題、且想要自行體會解謎樂趣，請趕快回上一頁。
+
+
+---
+
+
+### Comments and Our Solutions
 
 (TODO)
 
