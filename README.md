@@ -12,6 +12,6 @@ You goal is to get the flag
 
 - [prob.py](prob.py)
 
-### Comments
+### Comments and Our Solutions
 
 - [comments/README.md](comments/README.md)
