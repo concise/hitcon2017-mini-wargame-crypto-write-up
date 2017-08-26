@@ -13,7 +13,11 @@
   4.  `send_msg('Welcome!!')` 和 `send_msg('')` 和 `send_msg('command not found')` 和 `send_msg(flag)` 會送給我們這四組明文密文 pairs，提供了許多微調 IV 去 replay 做 chosen ciphertext attack 的空間
   5.  只要一個 block 的 byte 0、byte 1、byte 2 已知，我們就可以利用 `echo` 指令
       1.  做 chosen ciphertext attack 去猜一個 block 加密前的 byte 15
+          - 只要看到 `send_msg('')` 就是猜中 byte 15 了
       2.  做 chosen ciphertext attack 去猜一個 block 加密前的 byte 3 到 byte 14，一次只猜一個 byte
+          - 猜 byte i 的值
+          - 調整 IV 使得明文 prefix 是 (' '*(i-3) + 'echo') 且明文最後一個 byte 值是 (15-i)
+          - 觀察結果是 `send_msg('command not found')` (猜錯) 還是 `send_msg('')` (猜中了)
   6.  利用 `echo` 指令，可以讓第二個 block 的 byte 0、byte 1、byte 2、byte 3 被 shift 進第一個 block
 
 - 其實就算 prob.py 檔案 while True 無窮迴圈中，十多行的 if-elif-...-else
