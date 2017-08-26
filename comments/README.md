@@ -34,6 +34,10 @@
 
   我們也可以輕鬆地找出 flag 的明文。
 
+- 和 TCP server 互動的輔助程式: [utils.py](utils.py)
+
+- 建議寫點程式自動化
+
 - 這道題目的答案是 `hitcon{IV_15_ve3y_funny}`
 
 - 不太一樣但蠻相關的 [padding oracle attack][poa] 十分經典，這些看似很傻的弱點有不少實際案例
