@@ -34,15 +34,16 @@
           - 猜錯了，就再猜一個別的值
   6.  利用 `echo` 指令，可以讓第二個 block 的 byte 0、byte 1、byte 2、byte 3 被 shift 進第一個 block
 
-- 其實就算 prob.py 檔案 while True 無窮迴圈中，十多行的 if-elif-...-else
-  程式被化簡到只剩下兩個 cases 像這樣子：
+- 其實，就算 prob.py 檔案 while True 無窮迴圈中，十多行的 if-elif-...-else
+  程式被化簡到沒有 echo 等指令了，只剩下兩個 cases 這樣子：
 
       if msg.startswith('exit'):
           exit(0)
       else:
           send_msg('command not found')
 
-  我們也可以輕鬆地找出 flag 的明文。
+  我們也一樣可以找出 flag 完整的明文。重點是這個 oracle 讓我們能夠區分 chosen
+  ciphertext 被解密以後對應到的明文的兩種 cases...  這就直接洩漏了明文關於某一個 byte 的資訊了。
 
 - 和 TCP server 互動的輔助程式: [utils.py](utils.py)
 
